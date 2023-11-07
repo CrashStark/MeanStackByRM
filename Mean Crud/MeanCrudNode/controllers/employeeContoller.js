@@ -55,7 +55,7 @@ router.put('/:id', (req, res, next) => {
 
 router.delete('/:id', (req, res, next) => {
     var id=req.params.id;
-    Employee.findByIdAndRemove(id).then((response) => {
+    Employee.findOneAndDelete(id).then((response) => {
         res.send(response);
     }).catch(() => {
         res.status(400).send("No user present with this id");

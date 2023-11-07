@@ -19,4 +19,15 @@ selectEmployees?:Employee;
   postRequest(data:Employee): Observable<any>{
      return this.httpclient.post(this.url, data);
   }
+
+  getEmployees():Observable<any>{
+    return this.httpclient.get(this.url);
+  }
+
+  updateEmployees(emp :Employee){
+    return this.httpclient.put(this.url +`${emp.id}`, emp);
+  }
+  onDelete(emp:Employee):Observable<any>{
+    return this.httpclient.delete(this.url+`${emp.id}`);
+  }
 }

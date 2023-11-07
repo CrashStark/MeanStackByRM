@@ -7,25 +7,48 @@ import { NgForm } from '@angular/forms';
   selector: 'app-employee',
   templateUrl: './employee.component.html',
   styleUrls: ['./employee.component.css'],
-  providers:[EmployeeService]
+  providers: [EmployeeService]
 
 })
 export class EmployeeComponent implements OnInit {
 
-selectedEmployee= new Employee();
+  selectedEmployee = new Employee();
+  employees: Employee[] = [];
 
- 
+
   constructor(private empservice: EmployeeService) { }
 
   ngOnInit(): void {
     console.log(this.selectedEmployee.id);
+    this.getEmployee();
   }
-  onsubmit(formData:NgForm) {
+  onsubmit(formData: NgForm) {
     
-    this.empservice.postRequest(formData.value).subscribe((respose)=>{
+    this.empservice.postRequest(formData.value).subscribe((respose) => {
       console.log(JSON.stringify(respose));
-    
+
     });
+  }
+
+  getEmployee(){
+    this.empservice.getEmployees().subscribe((response)=>{
+      this.employees=response;
+    })
+  }
+
+  onEdit(emp:Employee){
+    this.selectedEmployee=emp;
+    
+  }
+
+  onDelete(emp:Employee){
+    if(confirm("Are you sure you want to delete")===true){
+      this.empservice.onDelete(emp).subscribe((response)=>{
+        alert("Employee has been deleted");
+        this.getEmployee();
+      })
+    }
+  
   }
 
 }
