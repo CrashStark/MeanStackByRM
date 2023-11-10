@@ -1,0 +1,46 @@
+{
+  "seller": [
+    {
+      "name": "Anil Sidhu",
+      "password": "abc@123",
+      "email": "Anil@email.com",
+      "id": 1
+    },
+    {
+      "name": "Ana De Armas",
+      "password": "ADa@123",
+      "email": "Ana@email.com",
+      "id": 2
+    },
+    {
+      "name": "Tony",
+      "password": "Tony@123",
+      "email": "tony@gmail.com",
+      "id": 3
+    },
+    {
+      "name": "Peter",
+      "password": "PeterPan@123",
+      "email": "peter@gmail.com",
+      "id": 4
+    },
+    {
+      "name": "BruceWayne",
+      "password": "Atomic123",
+      "email": "Bruce@Wayne.com",
+      "id": 5
+    },
+    {
+      "name": "Arya",
+      "password": "AryaStark",
+      "email": "Arya@gmail.com",
+      "id": 6
+    },
+    {
+      "name": "Uday",
+      "password": "Shetty",
+      "email": "udayShetty@gmail.com",
+      "id": 7
+    }
+  ]
+}
