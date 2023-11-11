@@ -1,11 +1,62 @@
 <div class="seller-auth">
-    <div class="signup">
-        <h1>Seller SignUp</h1>
-        <form #sellerSignUp="ngForm" (ngSubmit)="signup(sellerSignUp.value)" class="common-form">
-            <input class="form-input" type="text" ngModel name="name" placeholder="Enter Name">
-            <input class="form-input" type="password" ngModel name="password" placeholder="Enter Password">
-            <input  class="form-input" type="text" ngModel name="email" placeholder="Enter Email">
-            <button class="form-button">SignUp</button>
-        </form>
-    </div>
+  <div *ngIf="!showLogin"   class="signup">
+    <h1>Seller SignUp</h1>
+    <form
+      #sellerSignUp="ngForm"
+      (ngSubmit)="signup(sellerSignUp.value)"
+      class="common-form"
+    >
+      <input
+        class="form-input"
+        type="text"
+        ngModel
+        name="name"
+        placeholder="Enter Name"
+      />
+      <input
+        class="form-input"
+        type="password"
+        ngModel
+        name="password"
+        placeholder="Enter Password"
+      />
+      <input
+        class="form-input"
+        type="text"
+        ngModel
+        name="email"
+        placeholder="Enter Email"
+      />
+      <button class="form-button">SignUp</button>
+      <a (click)="openLogin()" style="margin: 20px;" class="auth-toggle">Already have Account? click to login</a>
+    </form>
+  </div>
+  <!-- Login area -->
+  <div *ngIf="showLogin" class="login">
+    <h1>Seller Login</h1>
+    <p class="error-p" >{{authError}}</p>
+    <form
+      #sellerLogin="ngForm"
+      (ngSubmit)="login(sellerLogin.value)"
+      class="common-form"
+    >
+      <input
+        class="form-input"
+        type="text"
+        ngModel
+        name="email"
+        placeholder="Enter Email"
+      />
+      <input
+        class="form-input"
+        type="password"
+        ngModel
+        name="password"
+        placeholder="Enter Password"
+      />
+
+      <button class="form-button">Login</button>
+      <a (click)="openSignup()" style="margin: 20px;" class="auth-toggle">Don't have Account? click to Sign up</a>
+    </form>
+  </div>
 </div>
