@@ -1,0 +1,36 @@
+.common-form{
+    text-align: center;
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+    border: none;
+    align-items: center;
+}
+
+.common-form input{
+    height: 16px;
+    width: 200px;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.091);
+}
+
+.common-form textarea{
+    width: 215px;
+    margin-top:10px ;
+    background-color: rgba(0, 0, 0, 0.091);
+    
+}
+.common-form button{
+    width: 25%;
+    height: 30px;
+    margin-top: 20px;
+    border: none;
+    color: blueviolet;
+    background-color: rgba(0, 0, 0, 0.189);
+}
+
+.common-form input::placeholder,textarea::placeholder{
+    color: blueviolet;
+}

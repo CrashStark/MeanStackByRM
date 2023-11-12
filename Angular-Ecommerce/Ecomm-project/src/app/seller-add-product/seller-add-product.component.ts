@@ -11,5 +11,7 @@ export class SellerAddProductComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  addProductValue(data:object){
+    console.log(data);
+  }
 }
