@@ -1,3 +1,4 @@
+import { SafeCall } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 @Component({
@@ -7,6 +8,7 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
   menuType='default';
+  sellerName:string='';
   constructor(private router:Router) { }
 
   ngOnInit(): void {
@@ -17,14 +19,25 @@ export class HeaderComponent implements OnInit {
         if(localStorage.getItem("seller")&&event.url.includes('seller')){
           console.log("In Seller Area");
           this.menuType ='seller';
+          if(localStorage.getItem('seller')){
+            let sellerStore=localStorage.getItem('seller');
+            let sellerData=sellerStore && JSON.parse(sellerStore)[0];
+            this.sellerName=sellerData.name;
+          }
         }else{
           console.log("outside Seller");
           this.menuType='default';
+          console.log(this.menuType);
         }
         console.log(event.url);
       }
      
     })
   }
+logout(){
+  localStorage.removeItem('seller');
+  this.router.navigate(['/']);
+  history.pushState(null,'');
+}
 
 }
