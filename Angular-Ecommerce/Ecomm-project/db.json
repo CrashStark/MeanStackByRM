@@ -42,5 +42,34 @@
       "email": "udayShetty@gmail.com",
       "id": 7
     }
+  ],
+  "products": [
+    {
+      "name": "Iphone",
+      "price": "100000",
+      "Color": "white",
+      "category": "Electronics",
+      "description": "Iphone 14 black 256gb",
+      "image": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-14-finish-select-202209-6-7inch-blue_AV1_GEO_EMEA?wid=5120&hei=2880&fmt=p-jpg&qlt=80&.v=1661027868571",
+      "id": 1
+    },
+    {
+      "name": "A51",
+      "price": "50000",
+      "Color": "white",
+      "category": "Electronics",
+      "description": "Samsung A51 white 128gb",
+      "image": "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-a51-sm-a515-1.jpg",
+      "id": 2
+    },
+    {
+      "name": "Motorolla 11",
+      "price": "55000",
+      "Color": "Black",
+      "category": "Electronics",
+      "description": "Moto 11 128gb ram Black",
+      "image": "https://fdn2.gsmarena.com/vv/pics/motorola/motorola-moto-g84-1.jpg",
+      "id": 3
+    }
   ]
 }

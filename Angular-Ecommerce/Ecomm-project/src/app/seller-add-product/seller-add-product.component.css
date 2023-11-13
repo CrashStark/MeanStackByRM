@@ -5,6 +5,7 @@
     flex-direction: column;
     border: none;
     align-items: center;
+    justify-self: center;
 }
 
 .common-form input{
@@ -33,4 +34,13 @@
 
 .common-form input::placeholder,textarea::placeholder{
     color: blueviolet;
+}
+
+.add-product p{
+    background-color: rgb(218, 238, 189);
+    color: rgb(40, 233, 40);
+    text-align: center;
+}
+.add-product h1{
+    text-align: center;
 }
