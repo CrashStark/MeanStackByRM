@@ -63,12 +63,12 @@
       "id": 2
     },
     {
-      "name": "Motorolla 11",
-      "price": "55000",
-      "Color": "Black",
+      "name": "HP Laptop",
+      "price": "66000",
+      "Color": "Silver",
       "category": "Electronics",
-      "description": "Moto 11 128gb ram Black",
-      "image": "https://fdn2.gsmarena.com/vv/pics/motorola/motorola-moto-g84-1.jpg",
+      "description": "Hp Laptop 4gb 1tb ",
+      "image": "https://5.imimg.com/data5/JM/PC/MY-26541044/hp-pavilion-x360-14m-ba013dx.jpg",
       "id": 3
     }
   ]

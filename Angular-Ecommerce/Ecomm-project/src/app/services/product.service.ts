@@ -19,4 +19,9 @@ export class ProductService {
     this.baseUrl='http://localhost:3000/products';
     return this.httpClient.get<Product[]>(this.baseUrl);
   }
+
+  deleteProduct(id:number){
+    this.baseUrl=`http://localhost:3000/products/${id}`
+     return this.httpClient.delete(this.baseUrl);
+  }
 }
