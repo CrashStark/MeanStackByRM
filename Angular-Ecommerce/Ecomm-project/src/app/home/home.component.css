@@ -11,6 +11,9 @@
 .product-item{
     border: 1px solid rgba(0, 0, 0, 0.144);
     padding: 10px;
+    height: 450px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 .product-item img{
     width: 100%;
@@ -31,14 +34,20 @@
 }
 .product-footer{
     display: flex;
+    justify-content: space-between;
     
 }
 .product-footer a{
     text-decoration: none;
     color: black;
-    margin-top: 5px;
+    margin-bottom: 5px;
 }
 .productDetails .name-head{
     font-size: 20px;
     font-weight: 500;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

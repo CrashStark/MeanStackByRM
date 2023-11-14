@@ -39,4 +39,9 @@ export class ProductService {
     this.baseUrl='http://localhost:3000/products?_limit=4';
     return this.httpClient.get<Product[]>(this.baseUrl);
   }
+
+  trendingProducts(){
+    this.baseUrl='http://localhost:3000/products?_limit=8';
+    return this.httpClient.get<Product[]>(this.baseUrl);
+  }
 }

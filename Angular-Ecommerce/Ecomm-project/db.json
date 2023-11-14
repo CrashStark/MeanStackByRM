@@ -97,6 +97,51 @@
       "description": "Bose QuietComfort 35 II Wireless Headphones",
       "image": "https://rukminim2.flixcart.com/image/850/1000/krs40i80/headphone/v/r/q/noise-cancelling-700-bose-original-imag5gf6maygn6pa.jpeg?q=20",
       "id": 6
+    },
+    {
+      "name": "Samsung Laptop",
+      "price": "15000",
+      "Color": "Silver",
+      "category": "Electronics",
+      "description": "Another Laptop Description",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZ7oPdDPgaUqxG4rej5pS35YoMeHlqC0jTRcwt2iNK&s",
+      "id": 7
+    },
+    {
+      "name": "Acer Desktop",
+      "price": "1800",
+      "Color": "Black",
+      "category": "Electronics",
+      "description": "Dell Desktop PC with 8GB RAM",
+      "image": "https://m.media-amazon.com/images/I/71D3y82w27L.jpg",
+      "id": 8
+    },
+    {
+      "name": "Sony 4K Smart TV",
+      "price": "120000",
+      "Color": "Charcoal",
+      "category": "Electronics",
+      "description": "Sony 4K Smart TV 55 inches",
+      "image": "https://www.sony.co.in/image/88de0249f4df8101f60bccc4aaa57779?fmt=pjpeg&wid=330&bgcolor=FFFFFF&bgc=FFFFFF",
+      "id": 9
+    },
+    {
+      "name": "Nikon  DSLR",
+      "price": "90000",
+      "Color": "Black",
+      "category": "Electronics",
+      "description": "Canon EOS Rebel T7 DSLR Camera",
+      "image": "https://i.pinimg.com/originals/56/af/ea/56afea1c009e67eae14c0de360a78a05.png",
+      "id": 10
+    },
+    {
+      "name": "JBL Noise-Canceling Headphones",
+      "price": "30000",
+      "Color": "Silver",
+      "category": "Electronics",
+      "description": "Bose QuietComfort 35 II Wireless Headphones",
+      "image": "https://s.hdnux.com/photos/01/33/04/13/23872246/3/rawImage.jpg",
+      "id": 11
     }
   ]
 }

@@ -16,19 +16,17 @@
 <div class="product-list-wrapper">
   <h1>Trending Products</h1>
   <div class="row">
-    <div class="col-sm-3">
+    <div class="col-sm-3" *ngFor="let product of trendingProducts">
       <div class="product-item">
-        <img
-          src="https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-a51-sm-a515-1.jpg"
-        />
+        <img [src]="product.image" />
 
         <div class="productDetails">
-          <h6 class="name-head">New Apple Mobile</h6>
+          <h6 class="name-head">{{ product.name }}</h6>
           <div class="product-price">
-            <h6>Price: 100000</h6>
+            <h6>Price: {{ product.price }}</h6>
           </div>
           <div class="product-color">
-            <h6>Color: Blue</h6>
+            <h6>Color: {{ product.color }}</h6>
           </div>
         </div>
         <div class="product-footer">
@@ -37,152 +35,5 @@
         </div>
       </div>
     </div>
-    <div class="col-sm-3">
-      <div class="product-item">
-        <img
-          src="https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-a51-sm-a515-1.jpg"
-        />
-
-        <div class="productDetails">
-          <h6 class="name-head">New Apple Mobile</h6>
-          <div class="product-price">
-            <h6>Price: 100000</h6>
-          </div>
-          <div class="product-color">
-            <h6>Color: Blue</h6>
-          </div>
-        </div>
-        <div class="product-footer">
-          <a href="">View Details</a>
-          <a href="">Add to cart</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-3">
-      <div class="product-item">
-        <img
-          src="https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-a51-sm-a515-1.jpg"
-        />
-
-        <div class="productDetails">
-          <h6 class="name-head">New Apple Mobile</h6>
-          <div class="product-price">
-            <h6>Price: 100000</h6>
-          </div>
-          <div class="product-color">
-            <h6>Color: Blue</h6>
-          </div>
-        </div>
-        <div class="product-footer">
-          <a href="">View Details</a>
-          <a href="">Add to cart</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-3">
-      <div class="product-item">
-        <img
-          src="https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-a51-sm-a515-1.jpg"
-        />
-
-        <div class="productDetails">
-          <h6 class="name-head">New Apple Mobile</h6>
-          <div class="product-price">
-            <h6>Price: 100000</h6>
-          </div>
-          <div class="product-color">
-            <h6>Color: Blue</h6>
-          </div>
-        </div>
-        <div class="product-footer">
-          <a href="">View Details</a>
-          <a href="">Add to cart</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-3">
-        <div class="product-item">
-          <img
-            src="https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-a51-sm-a515-1.jpg"
-          />
-  
-          <div class="productDetails">
-            <h6 class="name-head">New Apple Mobile</h6>
-            <div class="product-price">
-              <h6>Price: 100000</h6>
-            </div>
-            <div class="product-color">
-              <h6>Color: Blue</h6>
-            </div>
-          </div>
-          <div class="product-footer">
-            <a href="">View Details</a>
-            <a href="">Add to cart</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-3">
-        <div class="product-item">
-          <img
-            src="https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-a51-sm-a515-1.jpg"
-          />
-  
-          <div class="productDetails">
-            <h6 class="name-head">New Apple Mobile</h6>
-            <div class="product-price">
-              <h6>Price: 100000</h6>
-            </div>
-            <div class="product-color">
-              <h6>Color: Blue</h6>
-            </div>
-          </div>
-          <div class="product-footer">
-            <a href="">View Details</a>
-            <a href="">Add to cart</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-3">
-        <div class="product-item">
-          <img
-            src="https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-a51-sm-a515-1.jpg"
-          />
-  
-          <div class="productDetails">
-            <h6 class="name-head">New Apple Mobile</h6>
-            <div class="product-price">
-              <h6>Price: 100000</h6>
-            </div>
-            <div class="product-color">
-              <h6>Color: Blue</h6>
-            </div>
-          </div>
-          <div class="product-footer">
-            <a href="">View Details</a>
-            <a href="">Add to cart</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-3">
-        <div class="product-item">
-          <img
-            src="https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-a51-sm-a515-1.jpg"
-          />
-  
-          <div class="productDetails">
-            <h6 class="name-head">New Apple Mobile</h6>
-            <div class="product-price">
-              <h6>Price: 100000</h6>
-            </div>
-            <div class="product-color">
-              <h6>Color: Blue</h6>
-            </div>
-          </div>
-          <div class="product-footer">
-            <a href="">View Details</a>
-            <a href="">Add to cart</a>
-          </div>
-        </div>
-      </div>
   </div>
 </div>
