@@ -8,4 +8,37 @@
     background-color: rgba(0, 0, 0, 0.174);
     border-radius: 5px;
 }
+.product-item{
+    border: 1px solid rgba(0, 0, 0, 0.144);
+    padding: 10px;
+}
+.product-item img{
+    width: 100%;
+    padding: 20px;
+    object-fit: contain;
+}
 
+.product-list-wrapper{
+    margin-top: 80px;
+    margin-bottom: 80px;
+    text-align: center;
+    
+}
+.productDetails{
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 15px;
+}
+.product-footer{
+    display: flex;
+    
+}
+.product-footer a{
+    text-decoration: none;
+    color: black;
+    margin-top: 5px;
+}
+.productDetails .name-head{
+    font-size: 20px;
+    font-weight: 500;
+}
