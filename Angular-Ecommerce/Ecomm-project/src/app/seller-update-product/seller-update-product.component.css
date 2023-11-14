@@ -9,8 +9,8 @@
 }
 
 .common-form input{
-    height: 40px;
-    width: 300px;
+    height: 16px;
+    width: 200px;
     padding: 10px;
     margin-top: 10px;
     border: none;
@@ -18,13 +18,13 @@
 }
 
 .common-form textarea{
-    width: 300px;
+    width: 215px;
     margin-top:10px ;
     background-color: rgba(0, 0, 0, 0.091);
     
 }
 .common-form button{
-    width: 200px;
+    width: 25%;
     height: 30px;
     margin-top: 20px;
     border: none;
@@ -43,6 +43,11 @@
 }
 .add-product h1{
     text-align: center;
-    color: blueviolet;
-    margin-top: 30px;
+}
+button{
+    cursor: pointer;
+}
+.message p{
+    background-color: rgb(200, 241, 139);
+    color: white;
 }

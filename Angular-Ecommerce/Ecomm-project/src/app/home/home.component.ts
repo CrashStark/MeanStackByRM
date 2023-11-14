@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductService } from '../services/product.service';
+import { Product } from '../datatype';
 
 @Component({
   selector: 'app-home',
@@ -6,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
-  constructor() { }
+   images = [944, 1011, 984].map((n) => `https://picsum.photos/id/${n}/900/500`);
+  popularProduct:undefined|Product[];
+  constructor(private productService:ProductService) { }
 
   ngOnInit(): void {
+    this.productService.popularProducts().subscribe((data)=>{
+      console.log(data);
+      this.popularProduct=data;
+    });
+
   }
 
 }

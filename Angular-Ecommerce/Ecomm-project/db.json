@@ -47,7 +47,7 @@
     {
       "name": "Iphone",
       "price": "100000",
-      "Color": "white",
+      "Color": "Black",
       "category": "Electronics",
       "description": "Iphone 14 black 256gb",
       "image": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-14-finish-select-202209-6-7inch-blue_AV1_GEO_EMEA?wid=5120&hei=2880&fmt=p-jpg&qlt=80&.v=1661027868571",
@@ -56,7 +56,7 @@
     {
       "name": "A51",
       "price": "50000",
-      "Color": "white",
+      "Color": "Greyish silver",
       "category": "Electronics",
       "description": "Samsung A51 white 128gb",
       "image": "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-a51-sm-a515-1.jpg",
@@ -64,12 +64,39 @@
     },
     {
       "name": "HP Laptop",
-      "price": "66000",
-      "Color": "Silver",
+      "price": "12200",
+      "Color": "",
       "category": "Electronics",
       "description": "Hp Laptop 4gb 1tb ",
       "image": "https://5.imimg.com/data5/JM/PC/MY-26541044/hp-pavilion-x360-14m-ba013dx.jpg",
       "id": 3
+    },
+    {
+      "name": "Dell XPS Laptop",
+      "price": "150000",
+      "Color": "Silver",
+      "category": "Electronics",
+      "description": "Dell XPS 13 Laptop with i7 processor",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPV07RgMKMEz7Oc3Syl4DXDasD8XR_8yppPgMuNGlvQT7bUGmWpZSjnkMBWw1qTdUrwMg&usqp=CAU",
+      "id": 4
+    },
+    {
+      "name": "Canon EOS DSLR",
+      "price": "90000",
+      "Color": "Black",
+      "category": "Electronics",
+      "description": "Canon EOS Rebel T7 DSLR Camera",
+      "image": "https://i.gadgets360cdn.com/products/cameras/large/1548234727_832_canon_eos-3000d-18-0mp-dslr-camera.jpg",
+      "id": 5
+    },
+    {
+      "name": "Bose Noise-Canceling Headphones",
+      "price": "30000",
+      "Color": "Silver",
+      "category": "Electronics",
+      "description": "Bose QuietComfort 35 II Wireless Headphones",
+      "image": "https://rukminim2.flixcart.com/image/850/1000/krs40i80/headphone/v/r/q/noise-cancelling-700-bose-original-imag5gf6maygn6pa.jpeg?q=20",
+      "id": 6
     }
   ]
 }

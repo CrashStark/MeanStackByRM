@@ -24,7 +24,7 @@
        <td>
         
        <fa-icon (click)="deleteProduct(item.id)" [icon]="icon" class="fa-2x"></fa-icon>
-       <fa-icon [icon]="edit" aria-hidden="true" class="fa-2x"></fa-icon></td> 
+       <a [routerLink]="['/seller-update-product',item.id]"><fa-icon [icon]="edit" aria-hidden="true" class="fa-2x"></fa-icon></a></td> 
     </tr>
 </tbody>
 </table>

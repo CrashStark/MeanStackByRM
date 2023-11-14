@@ -3,7 +3,7 @@ import { ProductService } from '../services/product.service';
 import { Product } from '../datatype';
 import {faCoffee} from '@fortawesome/free-solid-svg-icons';
 import {faTrash} from '@fortawesome/free-solid-svg-icons';
-import {faPencilAlt} from '@fortawesome/free-solid-svg-icons'
+import {faEdit} from '@fortawesome/free-solid-svg-icons'
 @Component({
   selector: 'app-seller-home',
   templateUrl: './seller-home.component.html',
@@ -14,7 +14,7 @@ export class SellerHomeComponent implements OnInit {
   constructor(private productService: ProductService) {}
   productMessage: undefined | string;
   icon=faTrash;
-  edit=faPencilAlt;
+  edit=faEdit;
   ngOnInit(): void {
     this.productListFunction();
   }

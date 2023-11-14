@@ -1,0 +1,11 @@
+.product-header-image{
+    object-fit: contain;
+    height: 600px;
+    width: 100%;
+}
+.carousel-caption{
+    color: blueviolet;
+    background-color: rgba(0, 0, 0, 0.174);
+    border-radius: 5px;
+}
+
