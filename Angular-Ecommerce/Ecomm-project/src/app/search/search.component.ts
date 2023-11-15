@@ -10,8 +10,8 @@ import { Product } from '../datatype';
 })
 export class SearchComponent implements OnInit {
   searchResult: undefined | Product[];
-  noResult=true;
-  resultData="";
+  noResult = false;
+  resultData = '';
 
   constructor(
     private activatedRouter: ActivatedRoute,
@@ -20,16 +20,15 @@ export class SearchComponent implements OnInit {
 
   ngOnInit(): void {
     let query = this.activatedRouter.snapshot.paramMap.get('query');
-   //this will tell typescript that this value will not be null
-    query=query!;
+    //this will tell typescript that this value will not be null
+    query = query!;
     console.log(typeof query);
-    this.resultData=query;
+    this.resultData = query;
     if (query) {
-      
       this.productService.searchProduct(query).subscribe((result) => {
         this.searchResult = result;
-        if(result.length ===0){
-          this.noResult=false;
+        if (result.length === 0) {
+          this.noResult = false;
         }
         console.log(this.searchResult);
       });

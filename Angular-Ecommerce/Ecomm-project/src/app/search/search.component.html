@@ -1,16 +1,20 @@
-<div class="no-result">
-  <h1 *ngIf="!noResult">
-    Cannot Find Result for "{{resultData}}" search!!!
+<div class="no-result" *ngIf="noResult">
+  <h1 >
+    Cannot Find Result for "{{ resultData }}" search!!!
     <span>
       <a [routerLink]="['/']">Click to return</a>
     </span>
   </h1>
-  <img src="https://miro.medium.com/v2/resize:fit:2000/1*TfLZROigFrs4iEe_dAGJeg.png">
+  <img 
+    src="https://miro.medium.com/v2/resize:fit:2000/1*TfLZROigFrs4iEe_dAGJeg.png"
+  />
 </div>
 
 <div class="row search-item" *ngFor="let search of searchResult">
   <div class="col-sm-3">
-    <img [src]="search.image" alt="" />
+    <a [routerLink]="['/details',search.id]">
+      <img [src]="search.image" alt="" />
+    </a>
   </div>
   <div class="col-sm-8 details">
     <h6>{{ search.name }}</h6>

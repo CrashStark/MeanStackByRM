@@ -1,0 +1,21 @@
+<div class="details">
+  <h1>Product Details</h1>
+  <div class="product-Details">
+    <img [src]="detailsProduct?.image" />
+    <div class="details-tags">
+      <p>Name: {{ detailsProduct?.name }}</p>
+      <p>Color: {{ detailsProduct?.color }}</p>
+      <p>Category: {{ detailsProduct?.category }}</p>
+      <p>Description: {{ detailsProduct?.description }}</p>
+    </div>
+    <div>
+      <button>Add to Cart</button>
+      <button>Buy Now</button>
+    </div>
+    <div class="quantity-group">
+        <button>-</button>
+        <input type="text" value="1">
+        <button>+</button>
+    </div>
+  </div>
+</div>
