@@ -44,4 +44,8 @@ export class ProductService {
     this.baseUrl='http://localhost:3000/products?_limit=8';
     return this.httpClient.get<Product[]>(this.baseUrl);
   }
+  searchProduct(query:string){
+    this.baseUrl=`http://localhost:3000/products?q=${query}`;
+    return this.httpClient.get<Product[]>(this.baseUrl);
+  }
 }
