@@ -12,7 +12,9 @@ export class UserAuthComponent implements OnInit {
   constructor(private serviceUser:UserService,
     private router:Router) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.serviceUser.userAuthReload();
+  }
   signup(user: Signup) {
     // do not use like console.log("button clicked" +user); 
     //else it will give object do console.log("button clicked" ,user)

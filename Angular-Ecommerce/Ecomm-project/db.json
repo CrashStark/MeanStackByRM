@@ -156,6 +156,18 @@
       "email": "harry@test.com",
       "password": "12345",
       "id": 2
+    },
+    {
+      "name": "Robb",
+      "email": "Robb@stark.com",
+      "password": "winterfell",
+      "id": 3
+    },
+    {
+      "name": "Alicent",
+      "email": "Alicent@green.com",
+      "password": "theGreens",
+      "id": 4
     }
   ]
 }
