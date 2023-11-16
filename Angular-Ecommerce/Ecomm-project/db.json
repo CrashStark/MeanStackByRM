@@ -143,5 +143,19 @@
       "image": "https://s.hdnux.com/photos/01/33/04/13/23872246/3/rawImage.jpg",
       "id": 11
     }
+  ],
+  "users": [
+    {
+      "name": "Angelica",
+      "email": "Angelica@test.com",
+      "password": "angel123",
+      "id": 1
+    },
+    {
+      "name": "Harry",
+      "email": "harry@test.com",
+      "password": "12345",
+      "id": 2
+    }
   ]
 }

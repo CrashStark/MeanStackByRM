@@ -60,4 +60,7 @@ export class HeaderComponent implements OnInit {
     this.router.navigate([`search/${query}`])
     console.warn(query);
   }
+  redirectToDetails(id:number){
+    this.router.navigate([`details/${id}`]);
+  }
 }

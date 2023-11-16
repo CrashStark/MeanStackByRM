@@ -13,7 +13,7 @@
     <button (click)="submitSearch(searchInput.value)">Search</button>
     <ul class="suggested-result" *ngIf="searchResult">
       <li *ngFor="let item of searchResult">
-        <a>{{item.name}}</a>
+        <a (mousedown)="redirectToDetails(item.id)">{{item.name}}</a>
       </li>
     </ul>
   </div>
@@ -21,7 +21,7 @@
     <ul *ngSwitchCase="'default'">
       <li><a [routerLink]="['/']">Home</a></li>
       <li><a [routerLink]="['/seller-auth']">Seller</a></li>
-      <li><a href="#">Login</a></li>
+      <li><a [routerLink]="['/user-auth']">Login/Signup</a></li>
       <li><a href="#">Cart</a></li>
     </ul>
     <ul *ngSwitchCase="'seller'">

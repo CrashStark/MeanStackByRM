@@ -10,6 +10,7 @@ import { Product } from '../datatype';
 })
 export class ProductDetailsComponent implements OnInit {
 detailsProduct:undefined|Product;
+productQuantity=1;
   constructor(private activatedRouter:ActivatedRoute, private productService:ProductService) { }
 
   ngOnInit(): void {
@@ -21,6 +22,13 @@ detailsProduct:undefined|Product;
         console.log(this.detailsProduct.color);
       }
     })
+  }
+  handleQuantity(val:string){
+    if(val==='min' && this.productQuantity>0){
+      this.productQuantity--;
+    }else if(val==='add' && this.productQuantity<20){
+      this.productQuantity++;
+    }
   }
 
 }
