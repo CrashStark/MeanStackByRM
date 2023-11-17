@@ -31,6 +31,11 @@ export class HeaderComponent implements OnInit {
           let userData = userStore && JSON.parse(userStore);
           this.userName = userData.name;
           this.menuType = 'user';
+        } else if (localStorage.getItem('userLogin')) {
+          let userStore = localStorage.getItem('userLogin');
+          let userData = userStore && JSON.parse(userStore);
+          this.userName = userData.name;
+          this.menuType = 'userLogin';
         } else {
           console.log('outside Seller');
           this.menuType = 'default';
@@ -42,10 +47,15 @@ export class HeaderComponent implements OnInit {
   }
   logout(val: string) {
     console.log(typeof val);
-   console.log( typeof localStorage.getItem(val));
+    console.log(typeof localStorage.getItem(val));
     if (localStorage.getItem(val) == 'seller') {
       localStorage.removeItem(val);
       this.router.navigate(['/']);
+      history.pushState(null, '');
+    } else if (localStorage.getItem(val) === 'user') {
+      localStorage.removeItem(val);
+      console.log('LogOut clicked');
+      this.router.navigate(['/user-auth']);
       history.pushState(null, '');
     } else  {
       localStorage.removeItem(val);
