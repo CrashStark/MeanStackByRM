@@ -13,6 +13,7 @@ export class HeaderComponent implements OnInit {
   sellerName: string = '';
   searchResult: undefined | Product[];
   userName: string = '';
+  cartItems=0;
   constructor(private router: Router, private productService: ProductService) {}
 
   ngOnInit(): void {
@@ -39,11 +40,19 @@ export class HeaderComponent implements OnInit {
         } else {
           console.log('outside Seller');
           this.menuType = 'default';
-          console.log(this.menuType);
+         
         }
-        console.log(event.url);
+       
       }
     });
+    let cartData=localStorage.getItem("localCart");
+   
+    if(cartData){
+      this.cartItems=JSON.parse(cartData).length;
+    }
+    this.productService.cartData.subscribe((items)=>{
+      this.cartItems=items.length;
+    })
   }
   logout(val: string) {
     console.log(typeof val);

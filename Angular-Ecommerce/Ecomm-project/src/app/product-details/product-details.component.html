@@ -9,8 +9,11 @@
       <p>Description: {{ detailsProduct?.description }}</p>
     </div>
     <div class="action-button">
-      <button>Add to Cart</button>
+      <button  *ngIf="!removeCart" (click)="addtocart()">Add to Cart</button>
+      <button *ngIf="removeCart" (click)="removeTocart(detailsProduct?.id)">Remove</button>
       <button>Buy Now</button>
+     
+
     </div>
     <div class="quantity-group">
         <button (click)="handleQuantity('min')">-</button>
