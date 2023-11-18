@@ -40,7 +40,7 @@ export class UserService {
         if (result && result.body?.length) {
           console.log(result.body);
           this.invalidUser.emit(false);
-          localStorage.setItem('userLogin', JSON.stringify(result.body[0]));
+          localStorage.setItem('user', JSON.stringify(result.body[0]));
           this.router.navigate(['/']);
         } else {
           this.invalidUser.emit(true);

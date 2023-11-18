@@ -175,5 +175,31 @@
       "password": "",
       "id": 5
     }
+  ],
+  "cart": [
+    {
+      "name": "Dell XPS Laptop",
+      "price": "150000",
+      "Color": "Silver",
+      "category": "Electronics",
+      "description": "Dell XPS 13 Laptop with i7 processor",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPV07RgMKMEz7Oc3Syl4DXDasD8XR_8yppPgMuNGlvQT7bUGmWpZSjnkMBWw1qTdUrwMg&usqp=CAU",
+      "quantity": 1,
+      "userId": 1,
+      "productId": 4,
+      "id": 1
+    },
+    {
+      "name": "A51",
+      "price": "50000",
+      "Color": "Greyish silver",
+      "category": "Electronics",
+      "description": "Samsung A51 white 128gb",
+      "image": "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-a51-sm-a515-1.jpg",
+      "quantity": 1,
+      "userId": 1,
+      "productId": 2,
+      "id": 2
+    }
   ]
 }
