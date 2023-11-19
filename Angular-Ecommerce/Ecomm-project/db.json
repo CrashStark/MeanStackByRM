@@ -200,6 +200,30 @@
       "userId": 1,
       "productId": 2,
       "id": 2
+    },
+    {
+      "name": "HP Laptop",
+      "price": "12200",
+      "Color": "",
+      "category": "Electronics",
+      "description": "Hp Laptop 4gb 1tb ",
+      "image": "https://5.imimg.com/data5/JM/PC/MY-26541044/hp-pavilion-x360-14m-ba013dx.jpg",
+      "quantity": 1,
+      "userId": 1,
+      "productId": 3,
+      "id": 3
+    },
+    {
+      "name": "Acer Desktop",
+      "price": "1800",
+      "Color": "Black",
+      "category": "Electronics",
+      "description": "Dell Desktop PC with 8GB RAM",
+      "image": "https://m.media-amazon.com/images/I/71D3y82w27L.jpg",
+      "quantity": 1,
+      "productId": 8,
+      "userId": 2,
+      "id": 4
     }
   ]
 }
