@@ -66,6 +66,7 @@ export class HeaderComponent implements OnInit {
       console.log('LogOut clicked');
       this.router.navigate(['/user-auth']);
       history.pushState(null, '');
+      this.productService.cartData.emit([]);
     } else  {
       localStorage.removeItem(val);
       console.log('LogOut clicked');

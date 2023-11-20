@@ -47,6 +47,8 @@ export class UserAuthComponent implements OnInit {
   }
   localCartToRemoteCart(){
     let data=localStorage.getItem('localCart');
+    let user =localStorage.getItem('user');
+    let userId=user && JSON.parse(user).id;
     if(data){
       let cartDataList:Product[]= JSON.parse(data);
       let user =localStorage.getItem('user');
@@ -71,5 +73,9 @@ export class UserAuthComponent implements OnInit {
         
       });
     }
+    setTimeout(()=>{
+      this.productservice.getCartList(userId);
+    },2000)
+   
   }
 }
