@@ -39,7 +39,7 @@
       <li>
         <a href="#">{{ userName | titlecase }}</a>
       </li>
-      <li><a href="#">Cart({{cartItems}})</a></li>
+      <li><a [routerLink]="['cart-page']">Cart({{cartItems}})</a></li>
   </ul>
   <ul *ngSwitchCase="'userLogin'">
     <li><a [routerLink]="['seller-home']">Product List</a></li>
