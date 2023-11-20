@@ -32,11 +32,13 @@ export class HeaderComponent implements OnInit {
           let userData = userStore && JSON.parse(userStore);
           this.userName = userData.name;
           this.menuType = 'user';
+          this.productService.getCartList(userData.id);
         } else if (localStorage.getItem('userLogin')) {
           let userStore = localStorage.getItem('userLogin');
           let userData = userStore && JSON.parse(userStore);
           this.userName = userData.name;
           this.menuType = 'userLogin';
+    
         } else {
           console.log('outside Seller');
           this.menuType = 'default';

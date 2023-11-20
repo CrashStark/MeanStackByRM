@@ -78,14 +78,16 @@ export class ProductService {
   addTocart(cart: cart) {
     return this.httpClient.post('http://localhost:3000/cart', cart);
   }
+  removeToCart(cartId:number){
+    return this.httpClient.delete('http://localhost:3000/cart/'+cartId);
+  }
   getCartList(userId: number) {
     return this.httpClient
       .get<Product[]>('http://localhost:3000/cart?userId=' + userId, {
         observe: 'response',
       })
       .subscribe((result) => {
-        if(result && result.body)
-       this.cartData.emit(result.body);
+        if (result && result.body) this.cartData.emit(result.body);
       });
   }
 }
