@@ -1,0 +1,28 @@
+.checkout h1{
+text-align: center;
+margin-top: 50px;
+margin-bottom: 50px;
+}
+.common-form{
+    display: flex;
+    flex-direction: column;
+   
+    
+}
+.form-input{
+ margin: 10px;
+ width: 300px;
+}
+.shipping-address h3{
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.order-Button{
+    text-align: center;
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 300px;
+    
+}

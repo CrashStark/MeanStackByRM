@@ -34,7 +34,10 @@
     text-align: center;
 }
 .summary{
-   
+    position: absolute;
+    top: 50px;
+    right: 0;
+
     line-height: 30px;
     padding: 5%;
     margin-top: 20px;
@@ -49,6 +52,13 @@
     padding-bottom: 3px;
 }
 .summary{
-    border: 1px solid #ddd;
+   
     height: 100%;
+}
+.checkoutBtn{
+    width: 100%;
+    border: none;
+    color: blueviolet;
+    font-size: large;
+    font-weight: 600;
 }
