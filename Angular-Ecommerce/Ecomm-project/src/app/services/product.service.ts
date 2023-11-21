@@ -90,4 +90,11 @@ export class ProductService {
         if (result && result.body) this.cartData.emit(result.body);
       });
   }
+
+  currentCart(){
+    this.baseUrl="http://localhost:3000/cart?userId="
+    let user=localStorage.getItem('user');
+    let userData=user && JSON.parse(user);
+    return this.httpClient.get<cart[]>(this.baseUrl+userData.id);
+  }
 }
