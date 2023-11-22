@@ -212,30 +212,6 @@
       "userId": 1,
       "productId": 3,
       "id": 3
-    },
-    {
-      "name": "Acer Desktop",
-      "price": "1800",
-      "Color": "Black",
-      "category": "Electronics",
-      "description": "Dell Desktop PC with 8GB RAM",
-      "image": "https://m.media-amazon.com/images/I/71D3y82w27L.jpg",
-      "quantity": 5,
-      "productId": 8,
-      "userId": 2,
-      "id": 4
-    },
-    {
-      "name": "Dell XPS Laptop",
-      "price": "150000",
-      "Color": "Silver",
-      "category": "Electronics",
-      "description": "Dell XPS 13 Laptop with i7 processor",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPV07RgMKMEz7Oc3Syl4DXDasD8XR_8yppPgMuNGlvQT7bUGmWpZSjnkMBWw1qTdUrwMg&usqp=CAU",
-      "quantity": 1,
-      "userId": 2,
-      "productId": 4,
-      "id": 10
     }
   ],
   "orders": [
@@ -246,6 +222,22 @@
       "totalPrice": 159100,
       "userId": 2,
       "id": 1
+    },
+    {
+      "email": "mango@tree.com",
+      "address": "d-4,53,hh",
+      "mobile": "14555632",
+      "totalPrice": 159100,
+      "userId": 2,
+      "id": 2
+    },
+    {
+      "email": "mango@tree.com",
+      "address": "4/A, Aishwarya Apartment, Sangam Nagar",
+      "mobile": "14555632",
+      "totalPrice": 159100,
+      "userId": 2,
+      "id": 3
     }
   ]
 }

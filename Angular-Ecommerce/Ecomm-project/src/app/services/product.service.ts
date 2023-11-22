@@ -101,4 +101,18 @@ export class ProductService {
     this.baseUrl="http://localhost:3000/orders";
     return this.httpClient.post(this.baseUrl,data);
   }
+  orderList(){
+    let user=localStorage.getItem('user');
+    let userData=user && JSON.parse(user);
+    this.baseUrl="http://localhost:3000/orders?userId=" +userData.id;
+    return this.httpClient.get<order[]>(this.baseUrl);
+  }
+
+  deleteCartItems(cartId:number|undefined){
+    return this.httpClient.delete('http://localhost:3000/cart/'+cartId,{observe:"response"}).subscribe((result)=>{
+      if(result){
+        this.cartData.emit([]);
+      }
+    });
+  }
 }
