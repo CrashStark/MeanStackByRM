@@ -237,8 +237,15 @@
       "productId": 4,
       "id": 10
     }
-    
-    
-   
+  ],
+  "orders": [
+    {
+      "email": "rupeshmaharana36@gmail.com",
+      "address": "4/A, Aishwarya Apartment, Sangam Nagar",
+      "mobile": "3232655501",
+      "totalPrice": 159100,
+      "userId": 2,
+      "id": 1
+    }
   ]
 }
