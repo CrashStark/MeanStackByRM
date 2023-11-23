@@ -11,7 +11,7 @@
         <li><span>{{item.name}}</span></li>
         <li><span>{{item.price}}</span></li>
         <li><span>{{item.quantity}}</span></li>
-        <li><button class="form-button">Remove to cart</button></li>
+        <li><button class="form-button" (click)="removeTocart(item.id)">Remove to cart</button></li>
       </ul>
     </div>
     <div class="col-sm-4 summary">
