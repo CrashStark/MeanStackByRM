@@ -115,4 +115,7 @@ export class ProductService {
       }
     });
   }
+  cancelOrder(orderId:number|undefined){
+    return this.httpClient.delete('http://localhost:3000/orders/'+orderId);
+  }
 }

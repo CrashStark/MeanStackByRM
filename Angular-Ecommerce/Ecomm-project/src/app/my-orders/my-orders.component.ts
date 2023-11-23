@@ -12,6 +12,16 @@ orderData:order[]|undefined;
   constructor(private productService:ProductService) { }
 
   ngOnInit(): void {
+    this.getOrderList();
+  }
+
+  cancelOrder(orderId:number|undefined){
+    orderId && this.productService.cancelOrder(orderId).subscribe((result)=>{
+      this.getOrderList();
+    });
+  }
+
+  getOrderList(){
     this.productService.orderList().subscribe((result)=>{
       if(result){
         this.orderData=result;
