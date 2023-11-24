@@ -13,10 +13,6 @@
     "src/**/*.d.ts"
   ],
   "angularCompilerOptions": {
-    "enableIvy": false,
-    "paths": {
-      "tslib" : ["path/to/node_modules/tslib/tslib.d.ts"]
-    },
     "importHelpers": false
   }
 }
