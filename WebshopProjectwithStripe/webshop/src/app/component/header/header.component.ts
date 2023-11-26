@@ -10,11 +10,11 @@ export class HeaderComponent {
   private _cart: Cart = { item: [] };
   itemQuantity = 0;
   @Input() get cart(): Cart {
-    return this._cart =this.cart;
+    return this._cart;
   }
 
   set cart(cart: Cart) {
-    this.cart = cart;
+    this._cart = cart;
     this.itemQuantity = cart.item.map((item) => item.quantity)
     .reduce((prev,current)=>prev+current,0);
   }
