@@ -1,10 +1,13 @@
 const express = require("express");
 const connection = require("../connection");
-const { request, response } = require("..");
+const { request, response, route } = require("..");
 const router = express.Router();
 const jwt = require("jsonwebtoken");
 const nodeMailer = require("nodemailer");
 require("dotenv").config();
+var auth=require('../services/authentication');
+var checkRole=require('../services/checkRole');
+
 
 router.post("/signUp", (req, res) => {
   let user = req.body;
@@ -110,10 +113,10 @@ router.post("/forgotpassword", (req, res) => {
   });
 });
 
-router.get("/get", (req, res) => {
+router.get("/get",auth.authenticateToken,checkRole.checkRole, (req, res) => {
   var query =
-    'select id,name,email,contactNumber,status from user whaere role="user"';
-  connetction.query(query, (err, results) => {
+    'select id,name,email,contactNumber,status from user where role="user"';
+  connection.query(query, (err, results) => {
     if (!err) {
       return res.status(200).json(results);
     } else {
@@ -122,7 +125,7 @@ router.get("/get", (req, res) => {
   });
 });
 
-router.patch("/update", (req, res) => {
+router.patch("/update",auth.authenticateToken,checkRole.checkRole, (req, res) => {
   let user = req.body;
   var query = "update user set status=? whereid=?";
   connection.query(query, [user.status, user.id], (err, results) => {
@@ -136,4 +139,12 @@ router.patch("/update", (req, res) => {
     }
   });
 });
+
+router.get('/checkToken',auth.authenticateToken,(req,res)=>{
+  return res.status(200).json({message:"true"})
+})
+
+router.post('/changePasswor',(req,res)=>{
+ // const 
+})
 module.exports = router;
