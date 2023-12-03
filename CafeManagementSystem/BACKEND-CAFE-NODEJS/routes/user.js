@@ -3,7 +3,7 @@ const connection = require("../connection");
 const { request, response } = require("..");
 const router = express.Router();
 const jwt = require("jsonwebtoken");
-const nodeMailer = require('nodemailer');
+const nodeMailer = require("nodemailer");
 require("dotenv").config();
 
 router.post("/signUp", (req, res) => {
@@ -65,50 +65,75 @@ router.post("/login", (req, res) => {
 });
 
 var transporter = nodeMailer.createTransport({
-    service:'gmail',
-    auth:{
-        user:process.env.email,
-        pass:process.env.PASSWORD
-    }
-})
+  service: "gmail",
+  auth: {
+    user: process.env.email,
+    pass: process.env.PASSWORD,
+  },
+});
 
-router.post('/forgotpassword',(req,res)=>{
-    const user = req.body;
-    query = 'select email,password from user where email=?';
-    connection.query(query,[user.email],(err,results)=>{
-        if(!err){
-            if(results.length<=0){
-                return response.status(200).json({message:"Password sent successfully to tour email"});
-            }else{
-                var mailOptions={
-                    from:process.env.EMAIL,
-                    to:results[0].email,
-                    subject:"Password by Cafe Management System",
-                    html:'<p><b>Your Login details for cafe Management System<b/><br><b>Email:</b>'+results[0].email+'<br><b>Password:</b>'+results[0].password+'<br><a href="http://localhost:4200/">Click Here to Login</a></p>'
-                };
-                transporter.sendMail(mailOptions,(err,info)=>{
-                    if(err){
-                        console.log(err);
-                    }else{
-                        console.log('Email sent :'+info.response);
-                    }
-                });
-                return response.status(200).json({message:"Password sent successfully to tour email"});
-            }
-        }else {
-            return res.status(500).json(err);
-        }
-    })
-})
-
-router.get('/get',(req,res)=>{
-  var query='select id,name,email,contactNumber,status from user whaere role="user"';
-  connetction.query(query,(err,results)=>{
-    if(!err){
-      return res.status(200).json(results);
-    }else{
+router.post("/forgotpassword", (req, res) => {
+  const user = req.body;
+  query = "select email,password from user where email=?";
+  connection.query(query, [user.email], (err, results) => {
+    if (!err) {
+      if (results.length <= 0) {
+        return response
+          .status(200)
+          .json({ message: "Password sent successfully to tour email" });
+      } else {
+        var mailOptions = {
+          from: process.env.EMAIL,
+          to: results[0].email,
+          subject: "Password by Cafe Management System",
+          html:
+            "<p><b>Your Login details for cafe Management System<b/><br><b>Email:</b>" +
+            results[0].email +
+            "<br><b>Password:</b>" +
+            results[0].password +
+            '<br><a href="http://localhost:4200/">Click Here to Login</a></p>',
+        };
+        transporter.sendMail(mailOptions, (err, info) => {
+          if (err) {
+            console.log(err);
+          } else {
+            console.log("Email sent :" + info.response);
+          }
+        });
+        return response
+          .status(200)
+          .json({ message: "Password sent successfully to tour email" });
+      }
+    } else {
       return res.status(500).json(err);
     }
-  })
-})
+  });
+});
+
+router.get("/get", (req, res) => {
+  var query =
+    'select id,name,email,contactNumber,status from user whaere role="user"';
+  connetction.query(query, (err, results) => {
+    if (!err) {
+      return res.status(200).json(results);
+    } else {
+      return res.status(500).json(err);
+    }
+  });
+});
+
+router.patch("/update", (req, res) => {
+  let user = req.body;
+  var query = "update user set status=? whereid=?";
+  connection.query(query, [user.status, user.id], (err, results) => {
+    if (!err) {
+      if (results.affectedRows == 0) {
+        return response.status(404).json({ message: "User id does not exist" });
+      }
+      return res.status(200).json({ message: "User Updated Successfully" });
+    } else {
+      return res.status(500).json(err);
+    }
+  });
+});
 module.exports = router;
