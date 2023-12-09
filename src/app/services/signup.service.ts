@@ -11,6 +11,7 @@ export class SignupService {
   constructor(private httpClient :HttpClient) { }
 
   registerUser(user:User):Observable<any>{
+    
     this.baseUrl = "http://localhost:8080/user/signUp";
     return this.httpClient.post(this.baseUrl,user);
   }
