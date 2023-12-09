@@ -1,0 +1,19 @@
+.header{
+    width: 100%;
+   display: flex;
+   justify-content: space-between;
+}
+.logo{
+    width:120%;
+    height: 80px;
+    
+}
+.header-module{
+    display: flex;
+    height: 80px;
+    align-items: center;
+   width: 50%;
+   justify-content: space-around;
+    width: 100%;
+ 
+}

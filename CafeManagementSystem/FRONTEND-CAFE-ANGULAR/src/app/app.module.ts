@@ -8,13 +8,17 @@ import { FormsModule } from '@angular/forms';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { AuthinterceptInterceptor } from './interceptService/authintercept.interceptor';
 import { CategoryComponent } from './category/category.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SignUpFormComponent,
     LoginFormComponent,
-    CategoryComponent
+    CategoryComponent,
+    SidebarComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

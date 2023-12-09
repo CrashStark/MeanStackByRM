@@ -1,0 +1,25 @@
+.side-bar{
+    height: 60vh;
+    /* border: 1px solid black; */
+    width:15%;
+}
+.userImage{
+    width: 100%;
+}
+.navigation{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.options{
+    border-bottom: 1px solid rgb(179, 175, 175)
+}
+div.options *{
+ padding-left: 10px;
+ text-align: center;
+ /* padding-bottom: 10px; */
+ ;
+}
+div.options:hover{
+    background-color: beige;
+}
