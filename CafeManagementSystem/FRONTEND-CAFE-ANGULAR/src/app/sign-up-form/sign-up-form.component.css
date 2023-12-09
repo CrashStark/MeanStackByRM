@@ -1,0 +1,56 @@
+.signUpContainer {
+  
+  width: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.formClass {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+ .property{
+ display: flex;
+ align-items: center;
+ justify-content: space-around;
+ height: 50px;
+}
+
+.property input{
+    margin-left: 10px;
+    height: 28px;
+    width: 300px;
+    border: none;
+    caret-color: #1DA1F2;
+    border-radius: 10px;
+    
+}
+
+
+.property input::placeholder{
+    color: cadetblue;
+    height: 100%;
+    padding: 10px;
+}
+.property input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+.button{
+    height: 28px;
+    width: 250px;
+    margin-top: 10px;
+    background-color: #1DA1F2;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+}
+.button:hover{
+    transform: scale(1.1);
+   
+}
+

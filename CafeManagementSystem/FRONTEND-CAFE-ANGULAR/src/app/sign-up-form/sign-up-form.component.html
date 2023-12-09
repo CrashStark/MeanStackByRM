@@ -1,0 +1,25 @@
+<div class="signUpContainer">
+  <form class="formClass" #signUpForm="ngForm" (ngSubmit)="onSubmit(signUpForm.value)">
+    <div class="property">
+        
+        <input type="text" class="input" placeholder="Name" name="name" ngModel>
+    </div>
+    <div class="property">
+       
+        <input type="number" class="input" placeholder="Contact Number"  name="contact" ngModel>
+    </div>
+
+    <div class="property">
+       
+        <input type="email" class="input" placeholder="Email" name="email" ngModel>
+    </div>
+
+    <div class="property">
+       
+        <input type="password" class="input" placeholder="Password" name="password" ngModel>
+    </div>
+    <div>
+        <button class="button">SignUp</button>
+    </div>
+  </form>
+</div>
