@@ -1,0 +1,67 @@
+.loginConatiner {
+  height: 500px;
+  width: 500px;
+  position: relative;
+  left: 0;
+  right: 0;
+  top:20vh;
+  margin: auto;
+  /* border: 1px solid red; */
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+.loginForm{
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+.email label{
+    font-size: 20px;
+    margin: 10px;
+    font-family: 'Poppins',sans-serif;
+}
+.password label{
+    font-size: 20px;
+    margin: 10px;
+    font-family: 'Poppins',sans-serif;
+}
+.email input{
+    font-size: 20px;
+    border: none;
+    height: 30px;
+    margin: 5px;
+    border-radius: 10px;
+}
+.password input{
+    font-size: 20px;
+    border: none;
+    height: 30px;
+    margin: 5px;
+    border-radius: 10px;
+}
+.password{
+    display: flex;
+    justify-content: space-between;
+}
+.email{
+    display: flex;
+    flex-direction: column;
+}
+.password{
+    display: flex;
+    flex-direction: column;
+}
+.inputButton {
+    text-align: center;
+    margin: 20px;
+    
+}
+.inputButton button{
+  
+    width: 180px;
+    height: 30px;
+    border: none;
+    font-size: 20px;
+    border-radius: 5px;
+}

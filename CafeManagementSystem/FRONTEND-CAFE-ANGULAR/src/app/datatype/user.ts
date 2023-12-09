@@ -4,3 +4,12 @@ export interface User{
     email:string,
     password:string
 }
+
+export interface LoginUser{
+    email:string,
+    password:string
+}
+
+export interface Categorty{
+    name:string;
+}

@@ -1,1 +1,17 @@
-<p>login-form works!</p>
+<div class="loginConatiner">
+  <form #ngInput="ngForm" (ngSubmit)="onlogin(ngInput.value)" class="loginForm">
+    <div class="email">
+      <label>Email</label>
+      <input type="text" placeholder="Please Enter Your Email" name="email" ngModel/>
+    </div>
+    <div class="password">
+      <label>Password</label>
+      <input type="password" placeholder="Please Enter Your Password" name="password" ngModel/>
+    </div>
+    <div class="inputButton">
+        <button>
+            Login
+        </button>
+    </div>
+  </form>
+</div>
