@@ -13,3 +13,10 @@ export interface LoginUser{
 export interface Categorty{
     name:string;
 }
+
+export interface Profile{
+    id:number,
+    name:string,
+    contact:string,
+    email:string
+}

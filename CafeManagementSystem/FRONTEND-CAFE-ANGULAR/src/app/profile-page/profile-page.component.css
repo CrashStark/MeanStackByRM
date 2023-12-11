@@ -9,7 +9,7 @@
   /* border: 1px solid black; */
 }
 .user-div {
-  height: 40vh;
+  height: 47vh;
 }
 .img-div img {
   width: 100%;
@@ -31,17 +31,23 @@ input {
   display: flex;
   justify-content: end;
   position: relative;
+  background-image: url("https://assets-global.website-files.com/64949e4863d96e26a1da8386/64b9451865a683fd39bccfa1_5f6e93d250a6d04f4eae9f02_Backgrounds-WFU-thumbnail-(size).jpeg");
 }
 
 .changeBtn {
   position: absolute;
-  margin-bottom: 20px;
+  margin-top: 10px;
+  
 }
 .changeBtn button {
   height: 28px;
   width: 150px;
   border: none;
-  margin-left: 5px;
+  margin-right: 5px;
   font-size: 16px;
   cursor: pointer;
+}
+
+label{
+    font-weight: 700;
 }

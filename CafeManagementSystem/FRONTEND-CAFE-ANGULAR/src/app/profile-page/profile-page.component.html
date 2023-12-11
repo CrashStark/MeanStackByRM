@@ -1,43 +1,74 @@
 <div class="profile-container">
-    <div class="img-div">
-        <img src="https://png.pngtree.com/thumb_back/fh260/background/20200801/pngtree-purple-abstract-background-fluid-gradient-with-wave-forms-image_375467.jpg">
-    </div>
-    <div class="user-div">
-      <form class="user-form" #edupForm="ngForm" (ngSubmit)="onEditUpadate(edupForm.value)">
-        <div>
-            <label>
-                <p>Name</p>
-                <input type="text" name="name" [disabled]="Disabled" [(ngModel)]="formData.name">
-            </label>
-        </div>
-        <div>
-            <label>
-                <p>Contact</p>
-                <input type="text" name="contact"  [disabled]="Disabled" [(ngModel)]="formData.contact">
-            </label>
-        </div>
-        <div>
-            <label>
-                <p>Email</p>
-                <input type="text" name="email"  [disabled]="Disabled" [(ngModel)]="formData.email">
-            </label>
-        </div>
-        <div>
-            <label>
-                <p>Password</p>
-                <input type="Password" name="password"  [disabled]="Disabled" [(ngModel)]="formData.password">
-            </label>
-        </div>
-        <div>
-            <label>
-                <p>Confirm Password</p>
-                <input type="Password" name="confirmEmail"  [disabled]="Disabled" [(ngModel)]="formData.newPassword">
-            </label>
-        </div>
-      </form>
-      <div class="changeBtn">
-        <button (click)="onEditClick()">Edit</button>
-        <button>Update</button>
+  <div class="img-div">
+    <img
+      src="https://png.pngtree.com/thumb_back/fh260/background/20200801/pngtree-purple-abstract-background-fluid-gradient-with-wave-forms-image_375467.jpg"
+    />
+  </div>
+  <div class="user-div">
+    <form
+      class="user-form"
+      #edupForm="ngForm"
+      (ngSubmit)="onEditUpadate(edupForm.value)"
+    >
+      <div>
+        <label>
+          <p class="p">Name</p>
+          <input
+            type="text"
+            name="name"
+            [disabled]="Disabled"
+            [(ngModel)]="formData.name"
+          />
+        </label>
       </div>
+      <div>
+        <label>
+          <p class="p">Contact</p>
+          <input
+            type="text"
+            name="contact"
+            [disabled]="Disabled"
+            [(ngModel)]="formData.contact"
+          />
+        </label>
+      </div>
+      <div>
+        <label>
+          <p class="p">Email</p>
+          <input
+            type="text"
+            name="email"
+            [disabled]="Disabled"
+            [(ngModel)]="formData.email"
+          />
+        </label>
+      </div>
+      <div>
+        <label>
+          <p class="p">Password</p>
+          <input
+            type="Password"
+            name="password"
+            [disabled]="Disabled"
+            [(ngModel)]="formData.password"
+          />
+        </label>
+      </div>
+      <div>
+        <label>
+          <p class="p">Confirm Password</p>
+          <input
+            type="Password"
+            name="newpassword"
+            [disabled]="Disabled"
+            [(ngModel)]="formData.newPassword"
+          />
+        </label>
+      </div>
+    </form>
+    <div class="changeBtn">
+      <button (click)="onEditClick()">Edit</button>
+      <button type="submit" [disabled]="edupForm.invalid">Update</button>
     </div>
+  </div>
 </div>
