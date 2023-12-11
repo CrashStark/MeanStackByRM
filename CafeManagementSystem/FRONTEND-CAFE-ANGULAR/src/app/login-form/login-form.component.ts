@@ -26,7 +26,7 @@ export class LoginFormComponent implements OnInit {
       this.token = response.token;
       if (response) {
         this.tokenService.setToken(this.token);
-        this.router.navigate(['category']);
+        this.router.navigate(['profile']);
       }
     });
     this.ngInput?.reset();

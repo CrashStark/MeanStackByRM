@@ -124,6 +124,18 @@ router.get("/get",auth.authenticateToken,checkRole.checkRole, (req, res) => {
     }
   });
 });
+router.get("/getProfile", (req, res) => {
+  var email = req.email;
+  var query =
+    'select id,name,email,contactNumber from user where email=?';
+  connection.query(query,[email], (err, results) => {
+    if (!err) {
+      return res.status(200).json(results);
+    } else {
+      return res.status(500).json(err);
+    }
+  });
+});
 
 router.patch("/update",auth.authenticateToken,checkRole.checkRole, (req, res) => {
   let user = req.body;
