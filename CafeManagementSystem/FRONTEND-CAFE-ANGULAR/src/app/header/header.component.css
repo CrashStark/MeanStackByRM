@@ -1,12 +1,21 @@
 .header{
     width: 100%;
+    border-bottom: 1px solid gray;
+    margin-bottom: 20px;
    display: flex;
    justify-content: space-between;
 }
 .logo{
     width:120%;
     height: 80px;
+    display: flex;
+    align-items: center;
+    font-family:fantasy;
     
+}
+.logo img{
+    height: 80px;
+    width: 80px;
 }
 .header-module{
     display: flex;

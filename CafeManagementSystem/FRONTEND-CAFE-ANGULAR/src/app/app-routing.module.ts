@@ -4,6 +4,7 @@ import { SignUpFormComponent } from './sign-up-form/sign-up-form.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { CategoryComponent } from './category/category.component';
 import { AutheGuardGuard } from './authe-guard.guard';
+import { ProfilePageComponent } from './profile-page/profile-page.component';
 
 
 const routes: Routes = [
@@ -15,6 +16,8 @@ const routes: Routes = [
   },
   {
     path:'category', component:CategoryComponent, canActivate:[AutheGuardGuard]
+  },{
+    path:'profile', component:ProfilePageComponent
   }
 ];
 

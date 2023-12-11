@@ -1,12 +1,16 @@
 .side-bar{
+
     height: 60vh;
+    margin-left: 20px;
     /* border: 1px solid black; */
-    width:15%;
+    width:300px;
+    
 }
 .userImage{
     width: 100%;
 }
 .navigation{
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
