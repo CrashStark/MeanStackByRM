@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { Categorty, LoginUser, User } from '../datatype/user';
+import { Categorty, LoginUser, Product, User } from '../datatype/user';
 
 @Injectable({
   providedIn: 'root',
@@ -13,7 +13,7 @@ export class SignupService {
 
   checUserLoginStatus(){
     this.login.next(true);
-    console.log(this.login);
+    
   }
 
   registerUser(user: User): Observable<any> {
@@ -29,4 +29,8 @@ export class SignupService {
     return this.httpClient.get<Categorty[]>(this.baseUrl);
   }
 
+  getProducts():Observable<Product[]>{
+    this.baseUrl='http://localhost:8080/product/get';
+    return this.httpClient.get<Product[]>(this.baseUrl);
+  }
 }

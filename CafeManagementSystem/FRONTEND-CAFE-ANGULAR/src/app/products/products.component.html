@@ -1,0 +1,30 @@
+<div class="productContainer" *ngFor="let prod of product">
+    <div>
+        <h4>Product Id</h4>
+        <p>{{prod.id}}</p>
+    </div>
+    <div>
+        <h4>Product Name</h4>
+        <p>{{prod.name}}</p>
+    </div>
+    <div>
+        <h4>Category Id</h4>
+        <p>{{prod.categoryId}}</p>
+    </div>
+    <div *ngIf="prod.categoryname">
+        <h4>Category name</h4>
+        <p>{{prod.categoryname}}</p>
+    </div>
+    <div>
+        <h4>Product Price</h4>
+        <p>{{prod.price}}</p>
+    </div>
+    <div>
+        <h4>Product Status</h4>
+        <p>{{prod.status}}</p>
+    </div>
+    <div>
+        <h4>Product Description</h4>
+        <p>{{prod.description}}</p>
+    </div>
+</div>

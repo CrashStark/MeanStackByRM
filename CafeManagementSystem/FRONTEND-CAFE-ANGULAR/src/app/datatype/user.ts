@@ -11,7 +11,8 @@ export interface LoginUser{
 }
 
 export interface Categorty{
-    name:string;
+    id:number,
+    name:string
 }
 
 export interface Profile{
@@ -19,4 +20,14 @@ export interface Profile{
     name:string,
     contact:string,
     email:string
+}
+
+export interface Product{
+    id:number,
+    name:string,
+    categoryId:number,
+    categoryname:string,
+    description:string,
+    price:number,
+    status:boolean
 }

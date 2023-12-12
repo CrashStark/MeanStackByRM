@@ -11,6 +11,7 @@ import { CategoryComponent } from './category/category.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { HeaderComponent } from './header/header.component';
 import { ProfilePageComponent } from './profile-page/profile-page.component';
+import { ProductsComponent } from './products/products.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ProfilePageComponent } from './profile-page/profile-page.component';
     CategoryComponent,
     SidebarComponent,
     HeaderComponent,
-    ProfilePageComponent
+    ProfilePageComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,

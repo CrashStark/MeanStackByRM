@@ -1,1 +1,18 @@
-<p>category works!</p>
+<div class="showCategory">
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cate of category">
+          <td>{{cate.id}}</td>
+          <td>{{cate.name}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
