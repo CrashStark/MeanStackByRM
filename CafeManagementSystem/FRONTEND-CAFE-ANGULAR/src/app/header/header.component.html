@@ -16,9 +16,12 @@
         <div>
             <h3>About Us</h3>
         </div>
-        <div>
-            <h3>More</h3>
+        <div *ngIf="login; else more">
+            <h3>logout</h3>
         </div>
+        <ng-template #more>
+            <h3>More</h3>
+          </ng-template>
     </div>
 
 </div>

@@ -27,3 +27,8 @@ div.options *{
 div.options:hover{
     background-color: beige;
 }
+
+.options *{
+    text-decoration: none;
+    color: black;
+}

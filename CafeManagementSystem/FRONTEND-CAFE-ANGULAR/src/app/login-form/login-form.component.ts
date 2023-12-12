@@ -4,6 +4,7 @@ import { SignupService } from '../services/signup.service';
 import { LoginUser } from '../datatype/user';
 import { TokenServiceService } from '../services/token-service.service';
 import { Route, Router } from '@angular/router';
+import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-login-form',
@@ -12,6 +13,7 @@ import { Route, Router } from '@angular/router';
 })
 export class LoginFormComponent implements OnInit {
   @ViewChild('ngInput') ngInput: NgForm | undefined;
+   logout = new BehaviorSubject<boolean>(false);
   constructor(
     private userServices: SignupService,
     private tokenService: TokenServiceService,
@@ -26,6 +28,7 @@ export class LoginFormComponent implements OnInit {
       this.token = response.token;
       if (response) {
         this.tokenService.setToken(this.token);
+        this.userServices.login;
         this.router.navigate(['profile']);
       }
     });
