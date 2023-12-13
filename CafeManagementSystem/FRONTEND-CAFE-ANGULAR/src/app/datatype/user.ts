@@ -39,6 +39,6 @@ export interface Bills{
     contactNumber:number,
     parymentMethod:string,
     total:number,
-    productDetails:any,
+    productDetails:any[],
     createdBy:string
 }

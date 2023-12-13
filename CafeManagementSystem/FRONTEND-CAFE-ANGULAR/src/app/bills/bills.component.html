@@ -23,35 +23,37 @@
     </div>
     <div>
       <h4>Total</h4>
-      <p>{{ bill.total }} | currency : 'INR'</p>
+      <p>{{ bill.total | currency : 'INR'}} </p>
     </div>
   </div>
   <div class="details">
     <h4>Product Details</h4>
-    <div class="products" *ngFor="let pdetails of billsType">
-      <div>
-        <h4>Id</h4>
-        <p></p>
-      </div>
-      <div>
-        <h4>Name</h4>
-        <p></p>
-      </div>
-      <div>
-        <h4>Price</h4>
-        <p></p>
-      </div>
-      <div>
-        <h4>Total</h4>
-        <p></p>
-      </div>
-      <div>
-        <h4>Category</h4>
-        <p></p>
-      </div>
-      <div>
-        <h4>Quantity</h4>
-        <p></p>
+    <div class="products" *ngFor="let pdetails of billsType;let i = index;">
+      <div *ngFor="let products of pdetails.productDetails" class="detailproduct">
+        <div>
+          <h4>Id</h4>
+          <p>{{products.id}}</p>
+        </div>
+        <div>
+          <h4 id="name">Name</h4>
+          <p>{{products.name}} &nbsp;</p>
+        </div>
+        <div>
+          <h4>Price</h4>
+          <p>{{products.price}}</p>
+        </div>
+        <div>
+          <h4>Total</h4>
+          <p>{{products.total}}</p>
+        </div>
+        <div>
+          <h4>Category</h4>
+          <p>{{products.category}}</p>
+        </div>
+        <div>
+          <h4>Quantity</h4>
+          <p>{{products.quantity}}</p>
+        </div>
       </div>
     </div>
   </div>

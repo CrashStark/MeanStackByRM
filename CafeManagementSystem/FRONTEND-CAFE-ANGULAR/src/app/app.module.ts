@@ -13,6 +13,7 @@ import { HeaderComponent } from './header/header.component';
 import { ProfilePageComponent } from './profile-page/profile-page.component';
 import { ProductsComponent } from './products/products.component';
 import { BillsComponent } from './bills/bills.component';
+import { ReportComponent } from './report/report.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { BillsComponent } from './bills/bills.component';
     HeaderComponent,
     ProfilePageComponent,
     ProductsComponent,
-    BillsComponent
+    BillsComponent,
+    ReportComponent
   ],
   imports: [
     BrowserModule,
