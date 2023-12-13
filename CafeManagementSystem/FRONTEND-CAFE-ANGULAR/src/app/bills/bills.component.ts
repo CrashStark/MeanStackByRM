@@ -22,7 +22,10 @@ export class BillsComponent implements OnInit {
       if(response){
         this.getMessage=response;
         this.billDeleted=true;
-        this.getAllBillsHere()
+        this.getAllBillsHere();
+        setTimeout(()=>{
+          this.billDeleted=false;
+        },5000)
       }
     })
   }
@@ -31,6 +34,7 @@ export class BillsComponent implements OnInit {
       if(response){
         console.log(response);
         this.billsType=response;
+        
       }
     })
   }
