@@ -12,6 +12,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { HeaderComponent } from './header/header.component';
 import { ProfilePageComponent } from './profile-page/profile-page.component';
 import { ProductsComponent } from './products/products.component';
+import { BillsComponent } from './bills/bills.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ProductsComponent } from './products/products.component';
     SidebarComponent,
     HeaderComponent,
     ProfilePageComponent,
-    ProductsComponent
+    ProductsComponent,
+    BillsComponent
   ],
   imports: [
     BrowserModule,

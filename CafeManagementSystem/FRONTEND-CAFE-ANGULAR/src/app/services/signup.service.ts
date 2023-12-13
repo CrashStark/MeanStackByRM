@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { Categorty, LoginUser, Product, User } from '../datatype/user';
+import { Bills, Categorty, LoginUser, Product, User } from '../datatype/user';
 
 @Injectable({
   providedIn: 'root',
@@ -32,5 +32,10 @@ export class SignupService {
   getProducts():Observable<Product[]>{
     this.baseUrl='http://localhost:8080/product/get';
     return this.httpClient.get<Product[]>(this.baseUrl);
+  }
+
+  getAllBills():Observable<Bills[]>{
+    this.baseUrl="http://localhost:8080/bill/getBills";
+    return this.httpClient.get<Bills[]>(this.baseUrl);
   }
 }

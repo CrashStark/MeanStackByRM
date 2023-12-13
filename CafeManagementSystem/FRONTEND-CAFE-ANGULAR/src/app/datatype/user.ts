@@ -31,3 +31,14 @@ export interface Product{
     price:number,
     status:boolean
 }
+
+export interface Bills{
+    id:number,
+    name:string,
+    email:string,
+    contactNumber:number,
+    parymentMethod:string,
+    total:number,
+    productDetails:any,
+    createdBy:string
+}

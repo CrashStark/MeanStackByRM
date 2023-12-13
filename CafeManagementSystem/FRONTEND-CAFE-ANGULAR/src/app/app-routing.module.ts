@@ -6,6 +6,7 @@ import { CategoryComponent } from './category/category.component';
 import { AutheGuardGuard } from './authe-guard.guard';
 import { ProfilePageComponent } from './profile-page/profile-page.component';
 import { ProductsComponent } from './products/products.component';
+import { BillsComponent } from './bills/bills.component';
 
 
 const routes: Routes = [
@@ -21,6 +22,8 @@ const routes: Routes = [
     path:'profile', component:ProfilePageComponent
   },{
     path:'products',component:ProductsComponent
+  },{
+    path:'getbills',component:BillsComponent
   }
 ];
 

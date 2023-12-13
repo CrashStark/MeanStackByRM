@@ -1,0 +1,58 @@
+<div class="biilsContainer">
+  <h1>Bills</h1>
+  <div class="co-container" *ngFor="let bill of billsType">
+    <div>
+      <h4>Id</h4>
+      <p>{{ bill.id }}</p>
+    </div>
+    <div>
+      <h4>Name</h4>
+      <p>{{ bill.name }}</p>
+    </div>
+    <div>
+      <h4>Email</h4>
+      <p>{{ bill.email }}</p>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p>{{ bill.contactNumber }}</p>
+    </div>
+    <div>
+      <h4>Payment Type</h4>
+      <p>{{ bill.parymentMethod }}</p>
+    </div>
+    <div>
+      <h4>Total</h4>
+      <p>{{ bill.total }} | currency : 'INR'</p>
+    </div>
+  </div>
+  <div class="details">
+    <h4>Product Details</h4>
+    <div class="products" *ngFor="let pdetails of billsType">
+      <div>
+        <h4>Id</h4>
+        <p></p>
+      </div>
+      <div>
+        <h4>Name</h4>
+        <p></p>
+      </div>
+      <div>
+        <h4>Price</h4>
+        <p></p>
+      </div>
+      <div>
+        <h4>Total</h4>
+        <p></p>
+      </div>
+      <div>
+        <h4>Category</h4>
+        <p></p>
+      </div>
+      <div>
+        <h4>Quantity</h4>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+.co-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.products{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.biilsContainer{
+    display: flex;
+    flex-direction: column;
+}
