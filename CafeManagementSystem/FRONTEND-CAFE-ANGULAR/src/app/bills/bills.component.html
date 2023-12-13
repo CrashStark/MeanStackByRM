@@ -1,5 +1,6 @@
-<div class="biilsContainer">
+<div class="biilsContainer" *ngIf="billsType;else noBillFound">
   <h1>Bills</h1>
+  <p *ngIf="billDeleted" class="billdeleted">Bill Deleted Successfully!!!</p>
   <div class="co-container" *ngFor="let bill of billsType">
     <div>
       <h4>Id</h4>
@@ -25,6 +26,10 @@
       <h4>Total</h4>
       <p>{{ bill.total | currency : 'INR'}} </p>
     </div>
+    <div>
+        <h4>Delete</h4>
+        <button (click)="deleteBill(bill.id)" class="delete">Delete</button>
+      </div>
   </div>
   <div class="details">
     <h4>Product Details</h4>
@@ -58,3 +63,6 @@
     </div>
   </div>
 </div>
+<ng-template #noBillFound>
+<h1>No Bills Found</h1>
+</ng-template>

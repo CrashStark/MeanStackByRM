@@ -23,3 +23,15 @@
     margin-left: 10px;
     margin-right: 10px;
 }
+/* .delete{
+    width: 150px;
+    height: 20px;
+    background-color: red;
+    color: white;
+    font-weight: 500;
+} */
+
+.billdeleted{
+    background: red;
+    color: white;
+}

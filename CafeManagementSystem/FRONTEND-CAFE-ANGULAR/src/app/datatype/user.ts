@@ -42,3 +42,6 @@ export interface Bills{
     productDetails:any[],
     createdBy:string
 }
+export interface Message{
+    message:string
+}

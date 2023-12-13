@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { Bills, Categorty, LoginUser, Product, User } from '../datatype/user';
+import { Bills, Categorty, LoginUser, Message, Product, User } from '../datatype/user';
 
 @Injectable({
   providedIn: 'root',
@@ -37,5 +37,9 @@ export class SignupService {
   getAllBills():Observable<Bills[]>{
     this.baseUrl="http://localhost:8080/bill/getBills";
     return this.httpClient.get<Bills[]>(this.baseUrl);
+  }
+  deleteBills(id:number):Observable<Message>{
+    this.baseUrl=`http://localhost:8080/bill/delete/${id}`;
+    return this.httpClient.delete<Message>(this.baseUrl);
   }
 }
