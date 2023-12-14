@@ -14,6 +14,7 @@ import { ProfilePageComponent } from './profile-page/profile-page.component';
 import { ProductsComponent } from './products/products.component';
 import { BillsComponent } from './bills/bills.component';
 import { ReportComponent } from './report/report.component';
+import { PdfViewerComponent, PdfViewerModule } from 'ng2-pdf-viewer';
 
 @NgModule({
   declarations: [
@@ -26,13 +27,15 @@ import { ReportComponent } from './report/report.component';
     ProfilePageComponent,
     ProductsComponent,
     BillsComponent,
-    ReportComponent
+    ReportComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    PdfViewerModule
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,

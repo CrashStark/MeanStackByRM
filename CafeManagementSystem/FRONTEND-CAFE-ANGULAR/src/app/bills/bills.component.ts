@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { SignupService } from '../services/signup.service';
 import { Bills, Message } from '../datatype/user';
+import { ProfileServiceService } from '../services/profile-service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-bills',
@@ -11,7 +13,9 @@ export class BillsComponent implements OnInit {
   billsType:Bills[]=[];
   billDeleted=false;
   getMessage:Message={message:''};
-  constructor(private signUpService:SignupService) { }
+  constructor(private signUpService:SignupService,
+    private profileService:ProfileServiceService,
+    private router:Router) { }
 
   ngOnInit(): void {
    this.getAllBillsHere();
@@ -37,6 +41,10 @@ export class BillsComponent implements OnInit {
         
       }
     })
+  }
+  getPdf(bill:Bills){
+      this.profileService.setReportData(bill);
+      this.router.navigate(['/getReports']);
   }
 
 }

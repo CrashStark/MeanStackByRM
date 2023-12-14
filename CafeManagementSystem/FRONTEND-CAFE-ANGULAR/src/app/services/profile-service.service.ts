@@ -1,13 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Profile } from '../datatype/user';
+import { Bills, Profile } from '../datatype/user';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ProfileServiceService {
   baseURL: string = '';
+  ogBill:Bills|undefined;
   constructor(private httpClient: HttpClient) {}
 
   getUserProfile(email:string):Observable<Profile>{
@@ -17,5 +18,13 @@ export class ProfileServiceService {
 
   updateUserProfile(){
     this.baseURL = 'http://localhost:8080/user/getProfile';
+  }
+
+  setReportData(bill:Bills){
+    this.ogBill=bill;
+  }
+
+  getReportBill(){
+    return this.ogBill;
   }
 }

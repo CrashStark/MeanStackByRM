@@ -7,6 +7,7 @@ import { AutheGuardGuard } from './authe-guard.guard';
 import { ProfilePageComponent } from './profile-page/profile-page.component';
 import { ProductsComponent } from './products/products.component';
 import { BillsComponent } from './bills/bills.component';
+import { ReportComponent } from './report/report.component';
 
 
 const routes: Routes = [
@@ -24,6 +25,8 @@ const routes: Routes = [
     path:'products',component:ProductsComponent
   },{
     path:'getbills',component:BillsComponent
+  },{
+    path:'getReports',component:ReportComponent
   }
 ];
 

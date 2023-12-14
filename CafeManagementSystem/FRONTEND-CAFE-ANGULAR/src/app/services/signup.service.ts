@@ -42,4 +42,8 @@ export class SignupService {
     this.baseUrl=`http://localhost:8080/bill/delete/${id}`;
     return this.httpClient.delete<Message>(this.baseUrl);
   }
+  getReport(bill:Bills|undefined):Observable<Blob>{
+    this.baseUrl="http://localhost:8080/bill/getPdf";
+    return this.httpClient.post<Blob>(this.baseUrl,bill);
+  }
 }
